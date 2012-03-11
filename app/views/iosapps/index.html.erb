@@ -1,0 +1,26 @@
+<h1>Listing iosapps</h1>
+
+<table>
+  <tr>
+    <th>App</th>
+    <th>Version</th>
+    <th>Company Name</th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @iosapps.each do |iosapp| %>
+  <tr>
+    <td><%= iosapp.app_id %></td>
+    <td><%= iosapp.version %></td>
+    <td><%= iosapp.co_name %></td>
+    <td><%= link_to 'Show', iosapp %></td>
+    <td><%= link_to 'Edit', edit_iosapp_path(iosapp) %></td>
+    <td><%= link_to 'Destroy', iosapp, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Iosapp', new_iosapp_path %>

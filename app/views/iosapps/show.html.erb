@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>App:</b>
+  <%= @iosapp.app_id %>
+</p>
+
+<p>
+  <b>Version:</b>
+  <%= @iosapp.version %>
+</p>
+<p>
+  <b>Company Name:</b>
+  <%= @iosapp.co_name %>
+</p>
+
+<%= link_to 'Edit', edit_iosapp_path(@iosapp) %> |
+<%= link_to 'Back', iosapps_path %>
